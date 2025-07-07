@@ -1,0 +1,4 @@
+/target
+obj_dir
+*.vcd
+report.txt
