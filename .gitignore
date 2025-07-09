@@ -2,3 +2,4 @@
 obj_dir
 *.vcd
 report.txt
+.DS_Store

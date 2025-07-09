@@ -1,19 +1,19 @@
 // synchronous circuit fpga_test::Sha256Core
-module top(input wire [1:0] clock_reset, input wire [512:0] i, output wire [256:0] o);
-    wire [1409:0] od;
+module top(input wire [1:0] clock_reset, input wire [512:0] i, output wire [0:0] o);
+    wire [1153:0] od;
     wire [1152:0] d;
     wire [1152:0] q;
-    assign o = od[256:0];
+    assign o = od[0];
     top_state c0 (.clock_reset(clock_reset),.i(d[640:0]),.o(q[640:0]));
     top_w c1 (.clock_reset(clock_reset),.i(d[1152:641]),.o(q[1152:641]));
     assign od = kernel_kernel(clock_reset, i, q);
-    assign d = od[1409:257];
-    function [1409:0] kernel_kernel(input reg [1:0] arg_0, input reg [512:0] arg_1, input reg [1152:0] arg_2);
-        reg [640:0] r0;
-        reg [1152:0] r1;
-        reg [255:0] r2;
-        reg [0:0] r3;
-        reg [512:0] r4;
+    assign d = od[1153:1];
+    function [1153:0] kernel_kernel(input reg [1:0] arg_0, input reg [512:0] arg_1, input reg [1152:0] arg_2);
+        reg [0:0] r0;
+        reg [512:0] r1;
+        reg [511:0] r2;
+        reg [31:0] r3;
+        reg [1152:0] r4;
         reg [511:0] r5;
         reg [31:0] r6;
         reg [1152:0] r7;
@@ -59,194 +59,194 @@ module top(input wire [1:0] clock_reset, input wire [512:0] i, output wire [256:
         reg [511:0] r47;
         reg [31:0] r48;
         reg [1152:0] r49;
-        reg [511:0] r50;
-        reg [31:0] r51;
-        reg [1152:0] r52;
-        reg [640:0] r53;
-        reg [0:0] r54;
-        reg [0:0] r55;
+        reg [640:0] r50;
+        reg [1152:0] r51;
+        reg [0:0] r52;
+        reg [0:0] r53;
+        reg [640:0] r54;
+        reg [127:0] r55;
         reg [640:0] r56;
-        reg [127:0] r57;
-        reg [640:0] r58;
-        reg [1152:0] r59;
-        reg [0:0] r60;
-        reg [511:0] r61;
-        reg [31:0] r62;
-        reg [1152:0] r63;
-        reg [511:0] r64;
-        reg [31:0] r65;
-        reg [1152:0] r66;
-        reg [511:0] r67;
-        reg [31:0] r68;
-        reg [1152:0] r69;
-        reg [511:0] r70;
-        reg [31:0] r71;
-        reg [1152:0] r72;
-        reg [511:0] r73;
-        reg [31:0] r74;
-        reg [1152:0] r75;
-        reg [511:0] r76;
-        reg [31:0] r77;
-        reg [1152:0] r78;
-        reg [511:0] r79;
-        reg [31:0] r80;
-        reg [1152:0] r81;
-        reg [511:0] r82;
-        reg [31:0] r83;
-        reg [1152:0] r84;
-        reg [511:0] r85;
-        reg [31:0] r86;
-        reg [1152:0] r87;
-        reg [511:0] r88;
-        reg [31:0] r89;
-        reg [1152:0] r90;
-        reg [511:0] r91;
-        reg [31:0] r92;
-        reg [1152:0] r93;
-        reg [511:0] r94;
-        reg [31:0] r95;
-        reg [1152:0] r96;
-        reg [511:0] r97;
-        reg [31:0] r98;
-        reg [1152:0] r99;
-        reg [511:0] r100;
-        reg [31:0] r101;
-        reg [1152:0] r102;
-        reg [511:0] r103;
-        reg [31:0] r104;
-        reg [1152:0] r105;
-        reg [640:0] r106;
-        reg [127:0] r107;
+        reg [1152:0] r57;
+        reg [0:0] r58;
+        reg [511:0] r59;
+        reg [31:0] r60;
+        reg [1152:0] r61;
+        reg [511:0] r62;
+        reg [31:0] r63;
+        reg [1152:0] r64;
+        reg [511:0] r65;
+        reg [31:0] r66;
+        reg [1152:0] r67;
+        reg [511:0] r68;
+        reg [31:0] r69;
+        reg [1152:0] r70;
+        reg [511:0] r71;
+        reg [31:0] r72;
+        reg [1152:0] r73;
+        reg [511:0] r74;
+        reg [31:0] r75;
+        reg [1152:0] r76;
+        reg [511:0] r77;
+        reg [31:0] r78;
+        reg [1152:0] r79;
+        reg [511:0] r80;
+        reg [31:0] r81;
+        reg [1152:0] r82;
+        reg [511:0] r83;
+        reg [31:0] r84;
+        reg [1152:0] r85;
+        reg [511:0] r86;
+        reg [31:0] r87;
+        reg [1152:0] r88;
+        reg [511:0] r89;
+        reg [31:0] r90;
+        reg [1152:0] r91;
+        reg [511:0] r92;
+        reg [31:0] r93;
+        reg [1152:0] r94;
+        reg [511:0] r95;
+        reg [31:0] r96;
+        reg [1152:0] r97;
+        reg [511:0] r98;
+        reg [31:0] r99;
+        reg [1152:0] r100;
+        reg [511:0] r101;
+        reg [31:0] r102;
+        reg [1152:0] r103;
+        reg [640:0] r104;
+        reg [127:0] r105;
+        reg [511:0] r106;
+        reg [31:0] r107;
         reg [511:0] r108;
         reg [31:0] r109;
         reg [511:0] r110;
         reg [31:0] r111;
         reg [511:0] r112;
         reg [31:0] r113;
-        reg [511:0] r114;
-        reg [31:0] r115;
-        reg [31:0] r121;
-        reg [0:0] r122;
+        reg [31:0] r119;
+        reg [0:0] r120;
+        reg [31:0] r125;
         reg [31:0] r127;
-        reg [31:0] r129;
-        reg [31:0] r130;
+        reg [31:0] r128;
+        reg [31:0] r133;
         reg [31:0] r135;
-        reg [31:0] r137;
+        reg [31:0] r136;
         reg [31:0] r138;
+        reg [31:0] r139;
         reg [31:0] r140;
-        reg [31:0] r141;
         reg [31:0] r142;
-        reg [31:0] r144;
+        reg [31:0] r147;
         reg [31:0] r149;
-        reg [31:0] r151;
-        reg [31:0] r152;
+        reg [31:0] r150;
+        reg [31:0] r155;
         reg [31:0] r157;
-        reg [31:0] r159;
+        reg [31:0] r158;
         reg [31:0] r160;
+        reg [31:0] r161;
         reg [31:0] r162;
-        reg [31:0] r163;
         reg [31:0] r164;
-        reg [31:0] r166;
-        reg [31:0] r167;
-        reg [1152:0] r169;
-        reg [511:0] r170;
-        reg [31:0] r171;
-        reg [1152:0] r172;
-        reg [511:0] r173;
-        reg [31:0] r174;
-        reg [1152:0] r175;
-        reg [511:0] r176;
-        reg [31:0] r177;
-        reg [1152:0] r178;
-        reg [511:0] r179;
-        reg [31:0] r180;
-        reg [1152:0] r181;
-        reg [511:0] r182;
-        reg [31:0] r183;
-        reg [1152:0] r184;
-        reg [511:0] r185;
-        reg [31:0] r186;
-        reg [1152:0] r187;
-        reg [511:0] r188;
-        reg [31:0] r189;
-        reg [1152:0] r190;
-        reg [511:0] r191;
-        reg [31:0] r192;
-        reg [1152:0] r193;
-        reg [511:0] r194;
-        reg [31:0] r195;
-        reg [1152:0] r196;
-        reg [511:0] r197;
-        reg [31:0] r198;
-        reg [1152:0] r199;
-        reg [511:0] r200;
-        reg [31:0] r201;
-        reg [1152:0] r202;
-        reg [511:0] r203;
-        reg [31:0] r204;
-        reg [1152:0] r205;
-        reg [511:0] r206;
-        reg [31:0] r207;
-        reg [1152:0] r208;
-        reg [511:0] r209;
-        reg [31:0] r210;
-        reg [1152:0] r211;
-        reg [511:0] r212;
-        reg [31:0] r213;
-        reg [1152:0] r214;
-        reg [511:0] r215;
-        reg [31:0] r216;
-        reg [1152:0] r217;
-        reg [1152:0] r218;
-        reg [0:0] r219;
+        reg [31:0] r165;
+        reg [1152:0] r167;
+        reg [511:0] r168;
+        reg [31:0] r169;
+        reg [1152:0] r170;
+        reg [511:0] r171;
+        reg [31:0] r172;
+        reg [1152:0] r173;
+        reg [511:0] r174;
+        reg [31:0] r175;
+        reg [1152:0] r176;
+        reg [511:0] r177;
+        reg [31:0] r178;
+        reg [1152:0] r179;
+        reg [511:0] r180;
+        reg [31:0] r181;
+        reg [1152:0] r182;
+        reg [511:0] r183;
+        reg [31:0] r184;
+        reg [1152:0] r185;
+        reg [511:0] r186;
+        reg [31:0] r187;
+        reg [1152:0] r188;
+        reg [511:0] r189;
+        reg [31:0] r190;
+        reg [1152:0] r191;
+        reg [511:0] r192;
+        reg [31:0] r193;
+        reg [1152:0] r194;
+        reg [511:0] r195;
+        reg [31:0] r196;
+        reg [1152:0] r197;
+        reg [511:0] r198;
+        reg [31:0] r199;
+        reg [1152:0] r200;
+        reg [511:0] r201;
+        reg [31:0] r202;
+        reg [1152:0] r203;
+        reg [511:0] r204;
+        reg [31:0] r205;
+        reg [1152:0] r206;
+        reg [511:0] r207;
+        reg [31:0] r208;
+        reg [1152:0] r209;
+        reg [511:0] r210;
+        reg [31:0] r211;
+        reg [1152:0] r212;
+        reg [511:0] r213;
+        reg [31:0] r214;
+        reg [1152:0] r215;
+        reg [1152:0] r216;
+        reg [0:0] r217;
+        reg [0:0] r218;
+        reg [63:0] r219;
         reg [0:0] r220;
-        reg [63:0] r221;
-        reg [0:0] r222;
-        reg [511:0] r223;
-        reg [31:0] r224;
-        reg [0:0] r225;
-        reg [511:0] r226;
-        reg [31:0] r227;
-        reg [0:0] r228;
-        reg [511:0] r229;
-        reg [31:0] r230;
-        reg [0:0] r231;
-        reg [511:0] r232;
-        reg [31:0] r233;
-        reg [0:0] r234;
-        reg [511:0] r235;
-        reg [31:0] r236;
-        reg [0:0] r237;
-        reg [511:0] r238;
-        reg [31:0] r239;
-        reg [0:0] r240;
-        reg [511:0] r241;
-        reg [31:0] r242;
-        reg [0:0] r243;
-        reg [511:0] r244;
-        reg [31:0] r245;
-        reg [0:0] r246;
-        reg [511:0] r247;
-        reg [31:0] r248;
-        reg [0:0] r249;
-        reg [511:0] r250;
-        reg [31:0] r251;
-        reg [0:0] r252;
-        reg [511:0] r253;
-        reg [31:0] r254;
-        reg [0:0] r255;
-        reg [511:0] r256;
-        reg [31:0] r257;
-        reg [0:0] r258;
-        reg [511:0] r259;
-        reg [31:0] r260;
-        reg [0:0] r261;
-        reg [511:0] r262;
-        reg [31:0] r263;
-        reg [0:0] r264;
+        reg [511:0] r221;
+        reg [31:0] r222;
+        reg [0:0] r223;
+        reg [511:0] r224;
+        reg [31:0] r225;
+        reg [0:0] r226;
+        reg [511:0] r227;
+        reg [31:0] r228;
+        reg [0:0] r229;
+        reg [511:0] r230;
+        reg [31:0] r231;
+        reg [0:0] r232;
+        reg [511:0] r233;
+        reg [31:0] r234;
+        reg [0:0] r235;
+        reg [511:0] r236;
+        reg [31:0] r237;
+        reg [0:0] r238;
+        reg [511:0] r239;
+        reg [31:0] r240;
+        reg [0:0] r241;
+        reg [511:0] r242;
+        reg [31:0] r243;
+        reg [0:0] r244;
+        reg [511:0] r245;
+        reg [31:0] r246;
+        reg [0:0] r247;
+        reg [511:0] r248;
+        reg [31:0] r249;
+        reg [0:0] r250;
+        reg [511:0] r251;
+        reg [31:0] r252;
+        reg [0:0] r253;
+        reg [511:0] r254;
+        reg [31:0] r255;
+        reg [0:0] r256;
+        reg [511:0] r257;
+        reg [31:0] r258;
+        reg [0:0] r259;
+        reg [511:0] r260;
+        reg [31:0] r261;
+        reg [0:0] r262;
+        reg [511:0] r263;
+        reg [31:0] r264;
         reg [511:0] r265;
         reg [31:0] r266;
-        reg [511:0] r267;
+        reg [31:0] r267;
         reg [31:0] r268;
         reg [31:0] r269;
         reg [31:0] r270;
@@ -261,254 +261,242 @@ module top(input wire [1:0] clock_reset, input wire [512:0] i, output wire [256:
         reg [31:0] r279;
         reg [31:0] r280;
         reg [31:0] r281;
-        reg [31:0] r282;
+        reg [511:0] r282;
         reg [31:0] r283;
-        reg [511:0] r284;
-        reg [31:0] r285;
+        reg [31:0] r284;
+        reg [640:0] r285;
         reg [31:0] r286;
-        reg [640:0] r287;
         reg [31:0] r288;
-        reg [31:0] r290;
+        reg [31:0] r292;
         reg [31:0] r294;
-        reg [31:0] r296;
-        reg [31:0] r297;
+        reg [31:0] r295;
+        reg [31:0] r300;
         reg [31:0] r302;
-        reg [31:0] r304;
+        reg [31:0] r303;
         reg [31:0] r305;
-        reg [31:0] r307;
+        reg [31:0] r309;
         reg [31:0] r311;
-        reg [31:0] r313;
-        reg [31:0] r314;
+        reg [31:0] r312;
+        reg [640:0] r315;
+        reg [31:0] r316;
         reg [640:0] r317;
         reg [31:0] r318;
         reg [640:0] r319;
         reg [31:0] r320;
-        reg [640:0] r321;
-        reg [31:0] r322;
+        reg [31:0] r324;
+        reg [31:0] r325;
         reg [31:0] r326;
         reg [31:0] r327;
-        reg [31:0] r328;
-        reg [31:0] r329;
-        reg [640:0] r331;
+        reg [640:0] r329;
+        reg [31:0] r330;
+        reg [31:0] r331;
         reg [31:0] r332;
-        reg [31:0] r333;
-        reg [31:0] r334;
-        reg [640:0] r335;
-        reg [127:0] r336;
-        reg [31:0] r338;
-        reg [63:0] r339;
-        reg [0:0] r340;
+        reg [640:0] r333;
+        reg [127:0] r334;
+        reg [31:0] r336;
+        reg [63:0] r337;
+        reg [0:0] r338;
+        reg [13:0] r339;
+        reg [27:0] r340;
         reg [13:0] r341;
-        reg [27:0] r342;
-        reg [13:0] r343;
-        reg [13:0] r344;
-        reg [127:0] r345;
+        reg [13:0] r342;
+        reg [127:0] r343;
+        reg [31:0] r344;
         reg [31:0] r346;
-        reg [31:0] r348;
+        reg [31:0] r347;
+        reg [640:0] r348;
         reg [31:0] r349;
-        reg [640:0] r350;
         reg [31:0] r351;
-        reg [31:0] r353;
+        reg [31:0] r355;
         reg [31:0] r357;
-        reg [31:0] r359;
-        reg [31:0] r360;
+        reg [31:0] r358;
+        reg [31:0] r363;
         reg [31:0] r365;
-        reg [31:0] r367;
+        reg [31:0] r366;
         reg [31:0] r368;
-        reg [31:0] r370;
+        reg [31:0] r372;
         reg [31:0] r374;
-        reg [31:0] r376;
-        reg [31:0] r377;
+        reg [31:0] r375;
+        reg [640:0] r378;
+        reg [31:0] r379;
         reg [640:0] r380;
         reg [31:0] r381;
         reg [640:0] r382;
         reg [31:0] r383;
-        reg [640:0] r384;
-        reg [31:0] r385;
+        reg [31:0] r387;
+        reg [31:0] r388;
         reg [31:0] r389;
         reg [31:0] r390;
         reg [31:0] r391;
-        reg [31:0] r392;
         reg [31:0] r393;
+        reg [640:0] r394;
         reg [31:0] r395;
-        reg [640:0] r396;
-        reg [31:0] r397;
-        reg [1152:0] r398;
-        reg [640:0] r399;
-        reg [31:0] r400;
-        reg [1152:0] r401;
-        reg [640:0] r402;
-        reg [31:0] r403;
-        reg [1152:0] r404;
-        reg [640:0] r405;
-        reg [31:0] r406;
-        reg [31:0] r407;
-        reg [1152:0] r408;
-        reg [640:0] r409;
-        reg [31:0] r410;
-        reg [1152:0] r411;
-        reg [640:0] r412;
-        reg [31:0] r413;
-        reg [1152:0] r414;
-        reg [640:0] r415;
+        reg [1152:0] r396;
+        reg [640:0] r397;
+        reg [31:0] r398;
+        reg [1152:0] r399;
+        reg [640:0] r400;
+        reg [31:0] r401;
+        reg [1152:0] r402;
+        reg [640:0] r403;
+        reg [31:0] r404;
+        reg [31:0] r405;
+        reg [1152:0] r406;
+        reg [640:0] r407;
+        reg [31:0] r408;
+        reg [1152:0] r409;
+        reg [640:0] r410;
+        reg [31:0] r411;
+        reg [1152:0] r412;
+        reg [640:0] r413;
+        reg [31:0] r414;
+        reg [1152:0] r415;
         reg [31:0] r416;
         reg [1152:0] r417;
-        reg [31:0] r418;
-        reg [1152:0] r419;
-        reg [127:0] r420;
-        reg [127:0] r421;
-        reg [1152:0] r422;
-        reg [0:0] r423;
-        reg [640:0] r424;
-        reg [255:0] r425;
+        reg [127:0] r418;
+        reg [127:0] r419;
+        reg [1152:0] r420;
+        reg [0:0] r421;
+        reg [640:0] r422;
+        reg [255:0] r423;
+        reg [31:0] r424;
+        reg [640:0] r425;
         reg [31:0] r426;
-        reg [640:0] r427;
-        reg [31:0] r428;
-        reg [31:0] r429;
-        reg [1152:0] r430;
-        reg [640:0] r431;
-        reg [255:0] r432;
+        reg [31:0] r427;
+        reg [1152:0] r428;
+        reg [640:0] r429;
+        reg [255:0] r430;
+        reg [31:0] r431;
+        reg [640:0] r432;
         reg [31:0] r433;
-        reg [640:0] r434;
-        reg [31:0] r435;
-        reg [31:0] r436;
-        reg [1152:0] r437;
-        reg [640:0] r438;
-        reg [255:0] r439;
+        reg [31:0] r434;
+        reg [1152:0] r435;
+        reg [640:0] r436;
+        reg [255:0] r437;
+        reg [31:0] r438;
+        reg [640:0] r439;
         reg [31:0] r440;
-        reg [640:0] r441;
-        reg [31:0] r442;
-        reg [31:0] r443;
-        reg [1152:0] r444;
-        reg [640:0] r445;
-        reg [255:0] r446;
+        reg [31:0] r441;
+        reg [1152:0] r442;
+        reg [640:0] r443;
+        reg [255:0] r444;
+        reg [31:0] r445;
+        reg [640:0] r446;
         reg [31:0] r447;
-        reg [640:0] r448;
-        reg [31:0] r449;
-        reg [31:0] r450;
-        reg [1152:0] r451;
-        reg [640:0] r452;
-        reg [255:0] r453;
+        reg [31:0] r448;
+        reg [1152:0] r449;
+        reg [640:0] r450;
+        reg [255:0] r451;
+        reg [31:0] r452;
+        reg [640:0] r453;
         reg [31:0] r454;
-        reg [640:0] r455;
-        reg [31:0] r456;
-        reg [31:0] r457;
-        reg [1152:0] r458;
-        reg [640:0] r459;
-        reg [255:0] r460;
+        reg [31:0] r455;
+        reg [1152:0] r456;
+        reg [640:0] r457;
+        reg [255:0] r458;
+        reg [31:0] r459;
+        reg [640:0] r460;
         reg [31:0] r461;
-        reg [640:0] r462;
-        reg [31:0] r463;
-        reg [31:0] r464;
-        reg [1152:0] r465;
-        reg [640:0] r466;
-        reg [255:0] r467;
+        reg [31:0] r462;
+        reg [1152:0] r463;
+        reg [640:0] r464;
+        reg [255:0] r465;
+        reg [31:0] r466;
+        reg [640:0] r467;
         reg [31:0] r468;
-        reg [640:0] r469;
-        reg [31:0] r470;
-        reg [31:0] r471;
-        reg [1152:0] r472;
-        reg [640:0] r473;
-        reg [255:0] r474;
+        reg [31:0] r469;
+        reg [1152:0] r470;
+        reg [640:0] r471;
+        reg [255:0] r472;
+        reg [31:0] r473;
+        reg [640:0] r474;
         reg [31:0] r475;
-        reg [640:0] r476;
-        reg [31:0] r477;
-        reg [31:0] r478;
+        reg [31:0] r476;
+        reg [1152:0] r477;
+        reg [1152:0] r478;
         reg [1152:0] r479;
         reg [1152:0] r480;
         reg [640:0] r481;
-        reg [255:0] r482;
-        reg [1152:0] r483;
-        reg [255:0] r484;
-        reg [0:0] r485;
-        reg [1152:0] r486;
-        reg [255:0] r487;
-        reg [0:0] r488;
-        reg [640:0] r489;
-        reg [1152:0] r490;
-        reg [511:0] r491;
-        reg [31:0] r492;
-        reg [1152:0] r493;
-        reg [511:0] r494;
-        reg [31:0] r495;
-        reg [1152:0] r496;
-        reg [511:0] r497;
-        reg [31:0] r498;
-        reg [1152:0] r499;
-        reg [511:0] r500;
-        reg [31:0] r501;
-        reg [1152:0] r502;
-        reg [511:0] r503;
-        reg [31:0] r504;
-        reg [1152:0] r505;
-        reg [511:0] r506;
-        reg [31:0] r507;
-        reg [1152:0] r508;
-        reg [511:0] r509;
-        reg [31:0] r510;
-        reg [1152:0] r511;
-        reg [511:0] r512;
-        reg [31:0] r513;
-        reg [1152:0] r514;
-        reg [511:0] r515;
-        reg [31:0] r516;
-        reg [1152:0] r517;
-        reg [511:0] r518;
-        reg [31:0] r519;
-        reg [1152:0] r520;
-        reg [511:0] r521;
-        reg [31:0] r522;
-        reg [1152:0] r523;
-        reg [511:0] r524;
-        reg [31:0] r525;
-        reg [1152:0] r526;
-        reg [511:0] r527;
-        reg [31:0] r528;
-        reg [1152:0] r529;
-        reg [511:0] r530;
-        reg [31:0] r531;
+        reg [1152:0] r482;
+        reg [511:0] r483;
+        reg [31:0] r484;
+        reg [1152:0] r485;
+        reg [511:0] r486;
+        reg [31:0] r487;
+        reg [1152:0] r488;
+        reg [511:0] r489;
+        reg [31:0] r490;
+        reg [1152:0] r491;
+        reg [511:0] r492;
+        reg [31:0] r493;
+        reg [1152:0] r494;
+        reg [511:0] r495;
+        reg [31:0] r496;
+        reg [1152:0] r497;
+        reg [511:0] r498;
+        reg [31:0] r499;
+        reg [1152:0] r500;
+        reg [511:0] r501;
+        reg [31:0] r502;
+        reg [1152:0] r503;
+        reg [511:0] r504;
+        reg [31:0] r505;
+        reg [1152:0] r506;
+        reg [511:0] r507;
+        reg [31:0] r508;
+        reg [1152:0] r509;
+        reg [511:0] r510;
+        reg [31:0] r511;
+        reg [1152:0] r512;
+        reg [511:0] r513;
+        reg [31:0] r514;
+        reg [1152:0] r515;
+        reg [511:0] r516;
+        reg [31:0] r517;
+        reg [1152:0] r518;
+        reg [511:0] r519;
+        reg [31:0] r520;
+        reg [1152:0] r521;
+        reg [511:0] r522;
+        reg [31:0] r523;
+        reg [1152:0] r524;
+        reg [511:0] r525;
+        reg [31:0] r526;
+        reg [1152:0] r527;
+        reg [511:0] r528;
+        reg [31:0] r529;
+        reg [1152:0] r530;
+        reg [1152:0] r531;
         reg [1152:0] r532;
-        reg [511:0] r533;
-        reg [31:0] r534;
-        reg [1152:0] r535;
-        reg [511:0] r536;
-        reg [31:0] r537;
-        reg [1152:0] r538;
-        reg [640:0] r539;
-        reg [255:0] r540;
-        reg [1152:0] r541;
-        reg [255:0] r542;
-        reg [0:0] r543;
-        reg [1152:0] r544;
-        reg [255:0] r545;
-        reg [0:0] r546;
-        reg [256:0] r547;
-        reg [1409:0] r548;
-        reg [1:0] r549;
-        reg [27:0] r550;
-        reg [41:0] r551;
-        reg [34:0] r552;
-        reg [20:0] r553;
-        reg [48:0] r554;
-        reg [50:0] r555;
-        reg [38:0] r556;
-        reg [49:0] r557;
-        reg [37:0] r558;
-        reg [42:0] r559;
-        reg [56:0] r560;
-        reg [33:0] r561;
-        reg [44:0] r562;
-        reg [53:0] r563;
-        reg [16:0] r564;
-        reg [18:0] r565;
-        reg [6:0] r566;
-        reg [17:0] r567;
-        reg [5:0] r568;
-        reg [10:0] r569;
-        reg [24:0] r570;
-        reg [1:0] r571;
-        reg [12:0] r572;
-        reg [21:0] r573;
+        reg [640:0] r533;
+        reg [0:0] r534;
+        reg [0:0] r536;
+        reg [1153:0] r537;
+        reg [1:0] r538;
+        reg [27:0] r539;
+        reg [41:0] r540;
+        reg [34:0] r541;
+        reg [20:0] r542;
+        reg [48:0] r543;
+        reg [50:0] r544;
+        reg [38:0] r545;
+        reg [49:0] r546;
+        reg [37:0] r547;
+        reg [42:0] r548;
+        reg [56:0] r549;
+        reg [33:0] r550;
+        reg [44:0] r551;
+        reg [53:0] r552;
+        reg [16:0] r553;
+        reg [18:0] r554;
+        reg [6:0] r555;
+        reg [17:0] r556;
+        reg [5:0] r557;
+        reg [10:0] r558;
+        reg [24:0] r559;
+        reg [1:0] r560;
+        reg [12:0] r561;
+        reg [21:0] r562;
         localparam l0 = 1153'bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001011011111000001100110100011001000111111000001111011001101010111001101100000101011010001000110001010001000011100101001001111111101001010100111111110101001110100011110001101110111100110111001010111011011001111010111010000101011010100000100111100110011001110101101111100000110011010001100100011111100000111101100110101011100110110000010101101000100011000101000100001110010100100111111110100101010011111111010100111010001111000110111011110011011100101011101101100111101011101000010101101010000010011110011001100111;
         localparam l1 = 1153'bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx;
         localparam l2 = 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000;
@@ -537,32 +525,24 @@ module top(input wire [1:0] clock_reset, input wire [512:0] i, output wire [256:
         localparam l58 = 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001;
         localparam l59 = 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111;
         localparam l60 = 1'b1;
-        localparam l61 = 1'b1;
-        localparam l62 = 1'b0;
-        localparam l63 = 1'b1;
-        localparam l65 = 7'b0000000;
-        localparam l86 = 15'b000000000000000;
-        localparam l87 = 13'b0000000000000;
-        localparam l88 = 25'b0000000000000000000000000;
-        localparam l89 = 14'b00000000000000;
-        localparam l90 = 26'b00000000000000000000000000;
-        localparam l91 = 21'b000000000000000000000;
-        localparam l92 = 7'b0000000;
-        localparam l93 = 30'b000000000000000000000000000000;
-        localparam l94 = 19'b0000000000000000000;
-        localparam l95 = 10'b0000000000;
+        localparam l61 = 1'b0;
+        localparam l63 = 7'b0000000;
+        localparam l84 = 15'b000000000000000;
+        localparam l85 = 13'b0000000000000;
+        localparam l86 = 25'b0000000000000000000000000;
+        localparam l87 = 14'b00000000000000;
+        localparam l88 = 26'b00000000000000000000000000;
+        localparam l89 = 21'b000000000000000000000;
+        localparam l90 = 7'b0000000;
+        localparam l91 = 30'b000000000000000000000000000000;
+        localparam l92 = 19'b0000000000000000000;
+        localparam l93 = 10'b0000000000;
         begin
-            r549 = arg_0;
-            r4 = arg_1;
-            r1 = arg_2;
+            r538 = arg_0;
+            r1 = arg_1;
+            r51 = arg_2;
             // let d = D::dont_care();
             //
-            // let output_valid = false;
-            //
-            // let hash_out = q.state.h;
-            //
-            r0 = r1[640:0];
-            r2 = r0[255:0];
             // if input.start {
             //    d.state = Sha256State/* fpga_test::Sha256State */ {h: [bits(H0[0]), bits(H0[1]), bits(H0[2]), bits(H0[3]), bits(H0[4]), bits(H0[5]), bits(H0[6]), bits(H0[7]), ], round: bits(0), done: false, a: bits(H0[0]), b: bits(H0[1]), c: bits(H0[2]), d: bits(H0[3]), e: bits(H0[4]), f: bits(H0[5]), g: bits(H0[6]), h_reg: bits(H0[7]),};
             //    d.w[0] = input.block[0];
@@ -704,8 +684,6 @@ module top(input wire [1:0] clock_reset, input wire [512:0] i, output wire [256:
             //          d.state.h[6] = q.state.h[6] + d.state.g;
             //          d.state.h[7] = q.state.h[7] + d.state.h_reg;
             //          d.state.done = true;
-            //          output_valid = true;
-            //          hash_out = d.state.h;
             //       }
             //
             //    }
@@ -729,105 +707,103 @@ module top(input wire [1:0] clock_reset, input wire [512:0] i, output wire [256:
             //    d.w[13] = q.w[13];
             //    d.w[14] = q.w[14];
             //    d.w[15] = q.w[15];
-            //    output_valid = true;
-            //    hash_out = q.state.h;
             // }
             //
             //
-            r3 = r4[512];
+            r0 = r1[512];
             // d.state = Sha256State/* fpga_test::Sha256State */ {h: [bits(H0[0]), bits(H0[1]), bits(H0[2]), bits(H0[3]), bits(H0[4]), bits(H0[5]), bits(H0[6]), bits(H0[7]), ], round: bits(0), done: false, a: bits(H0[0]), b: bits(H0[1]), c: bits(H0[2]), d: bits(H0[3]), e: bits(H0[4]), f: bits(H0[5]), g: bits(H0[6]), h_reg: bits(H0[7]),};
             //
             // d.w[0] = input.block[0];
             //
-            r5 = r4[511:0];
-            r6 = r5[31:0];
-            r7 = l0; r7[672:641] = r6;
+            r2 = r1[511:0];
+            r3 = r2[31:0];
+            r4 = l0; r4[672:641] = r3;
             // d.w[1] = input.block[1];
             //
-            r8 = r4[511:0];
-            r9 = r8[63:32];
-            r10 = r7; r10[704:673] = r9;
+            r5 = r1[511:0];
+            r6 = r5[63:32];
+            r7 = r4; r7[704:673] = r6;
             // d.w[2] = input.block[2];
             //
-            r11 = r4[511:0];
-            r12 = r11[95:64];
-            r13 = r10; r13[736:705] = r12;
+            r8 = r1[511:0];
+            r9 = r8[95:64];
+            r10 = r7; r10[736:705] = r9;
             // d.w[3] = input.block[3];
             //
-            r14 = r4[511:0];
-            r15 = r14[127:96];
-            r16 = r13; r16[768:737] = r15;
+            r11 = r1[511:0];
+            r12 = r11[127:96];
+            r13 = r10; r13[768:737] = r12;
             // d.w[4] = input.block[4];
             //
-            r17 = r4[511:0];
-            r18 = r17[159:128];
-            r19 = r16; r19[800:769] = r18;
+            r14 = r1[511:0];
+            r15 = r14[159:128];
+            r16 = r13; r16[800:769] = r15;
             // d.w[5] = input.block[5];
             //
-            r20 = r4[511:0];
-            r21 = r20[191:160];
-            r22 = r19; r22[832:801] = r21;
+            r17 = r1[511:0];
+            r18 = r17[191:160];
+            r19 = r16; r19[832:801] = r18;
             // d.w[6] = input.block[6];
             //
-            r23 = r4[511:0];
-            r24 = r23[223:192];
-            r25 = r22; r25[864:833] = r24;
+            r20 = r1[511:0];
+            r21 = r20[223:192];
+            r22 = r19; r22[864:833] = r21;
             // d.w[7] = input.block[7];
             //
-            r26 = r4[511:0];
-            r27 = r26[255:224];
-            r28 = r25; r28[896:865] = r27;
+            r23 = r1[511:0];
+            r24 = r23[255:224];
+            r25 = r22; r25[896:865] = r24;
             // d.w[8] = input.block[8];
             //
-            r29 = r4[511:0];
-            r30 = r29[287:256];
-            r31 = r28; r31[928:897] = r30;
+            r26 = r1[511:0];
+            r27 = r26[287:256];
+            r28 = r25; r28[928:897] = r27;
             // d.w[9] = input.block[9];
             //
-            r32 = r4[511:0];
-            r33 = r32[319:288];
-            r34 = r31; r34[960:929] = r33;
+            r29 = r1[511:0];
+            r30 = r29[319:288];
+            r31 = r28; r31[960:929] = r30;
             // d.w[10] = input.block[10];
             //
-            r35 = r4[511:0];
-            r36 = r35[351:320];
-            r37 = r34; r37[992:961] = r36;
+            r32 = r1[511:0];
+            r33 = r32[351:320];
+            r34 = r31; r34[992:961] = r33;
             // d.w[11] = input.block[11];
             //
-            r38 = r4[511:0];
-            r39 = r38[383:352];
-            r40 = r37; r40[1024:993] = r39;
+            r35 = r1[511:0];
+            r36 = r35[383:352];
+            r37 = r34; r37[1024:993] = r36;
             // d.w[12] = input.block[12];
             //
-            r41 = r4[511:0];
-            r42 = r41[415:384];
-            r43 = r40; r43[1056:1025] = r42;
+            r38 = r1[511:0];
+            r39 = r38[415:384];
+            r40 = r37; r40[1056:1025] = r39;
             // d.w[13] = input.block[13];
             //
-            r44 = r4[511:0];
-            r45 = r44[447:416];
-            r46 = r43; r46[1088:1057] = r45;
+            r41 = r1[511:0];
+            r42 = r41[447:416];
+            r43 = r40; r43[1088:1057] = r42;
             // d.w[14] = input.block[14];
             //
-            r47 = r4[511:0];
-            r48 = r47[479:448];
-            r49 = r46; r49[1120:1089] = r48;
+            r44 = r1[511:0];
+            r45 = r44[479:448];
+            r46 = r43; r46[1120:1089] = r45;
             // d.w[15] = input.block[15];
             //
-            r50 = r4[511:0];
-            r51 = r50[511:480];
-            r52 = r49; r52[1152:1121] = r51;
-            r53 = r1[640:0];
-            r54 = r53[640];
-            r55 = ~(r54);
+            r47 = r1[511:0];
+            r48 = r47[511:480];
+            r49 = r46; r49[1152:1121] = r48;
+            r50 = r51[640:0];
+            r52 = r50[640];
+            r53 = ~(r52);
             // let round_val = q.state.round.raw();
             //
-            r56 = r1[640:0];
-            r57 = r56[639:512];
+            r54 = r51[640:0];
+            r55 = r54[639:512];
             // d.state = q.state;
             //
-            r58 = r1[640:0];
-            r59 = l1; r59[640:0] = r58;
+            r56 = r51[640:0];
+            r57 = l1; r57[640:0] = r56;
             // if round_val >= 16 {
             //    d.w[0] = q.w[1];
             //    d.w[1] = q.w[2];
@@ -866,94 +842,94 @@ module top(input wire [1:0] clock_reset, input wire [512:0] i, output wire [256:
             // }
             //
             //
-            r60 = r57 >= l2;
+            r58 = r55 >= l2;
             // d.w[0] = q.w[1];
             //
-            r61 = r1[1152:641];
-            r62 = r61[63:32];
-            r63 = r59; r63[672:641] = r62;
+            r59 = r51[1152:641];
+            r60 = r59[63:32];
+            r61 = r57; r61[672:641] = r60;
             // d.w[1] = q.w[2];
             //
-            r64 = r1[1152:641];
-            r65 = r64[95:64];
-            r66 = r63; r66[704:673] = r65;
+            r62 = r51[1152:641];
+            r63 = r62[95:64];
+            r64 = r61; r64[704:673] = r63;
             // d.w[2] = q.w[3];
             //
-            r67 = r1[1152:641];
-            r68 = r67[127:96];
-            r69 = r66; r69[736:705] = r68;
+            r65 = r51[1152:641];
+            r66 = r65[127:96];
+            r67 = r64; r67[736:705] = r66;
             // d.w[3] = q.w[4];
             //
-            r70 = r1[1152:641];
-            r71 = r70[159:128];
-            r72 = r69; r72[768:737] = r71;
+            r68 = r51[1152:641];
+            r69 = r68[159:128];
+            r70 = r67; r70[768:737] = r69;
             // d.w[4] = q.w[5];
             //
-            r73 = r1[1152:641];
-            r74 = r73[191:160];
-            r75 = r72; r75[800:769] = r74;
+            r71 = r51[1152:641];
+            r72 = r71[191:160];
+            r73 = r70; r73[800:769] = r72;
             // d.w[5] = q.w[6];
             //
-            r76 = r1[1152:641];
-            r77 = r76[223:192];
-            r78 = r75; r78[832:801] = r77;
+            r74 = r51[1152:641];
+            r75 = r74[223:192];
+            r76 = r73; r76[832:801] = r75;
             // d.w[6] = q.w[7];
             //
-            r79 = r1[1152:641];
-            r80 = r79[255:224];
-            r81 = r78; r81[864:833] = r80;
+            r77 = r51[1152:641];
+            r78 = r77[255:224];
+            r79 = r76; r79[864:833] = r78;
             // d.w[7] = q.w[8];
             //
-            r82 = r1[1152:641];
-            r83 = r82[287:256];
-            r84 = r81; r84[896:865] = r83;
+            r80 = r51[1152:641];
+            r81 = r80[287:256];
+            r82 = r79; r82[896:865] = r81;
             // d.w[8] = q.w[9];
             //
-            r85 = r1[1152:641];
-            r86 = r85[319:288];
-            r87 = r84; r87[928:897] = r86;
+            r83 = r51[1152:641];
+            r84 = r83[319:288];
+            r85 = r82; r85[928:897] = r84;
             // d.w[9] = q.w[10];
             //
-            r88 = r1[1152:641];
-            r89 = r88[351:320];
-            r90 = r87; r90[960:929] = r89;
+            r86 = r51[1152:641];
+            r87 = r86[351:320];
+            r88 = r85; r88[960:929] = r87;
             // d.w[10] = q.w[11];
             //
-            r91 = r1[1152:641];
-            r92 = r91[383:352];
-            r93 = r90; r93[992:961] = r92;
+            r89 = r51[1152:641];
+            r90 = r89[383:352];
+            r91 = r88; r91[992:961] = r90;
             // d.w[11] = q.w[12];
             //
-            r94 = r1[1152:641];
-            r95 = r94[415:384];
-            r96 = r93; r96[1024:993] = r95;
+            r92 = r51[1152:641];
+            r93 = r92[415:384];
+            r94 = r91; r94[1024:993] = r93;
             // d.w[12] = q.w[13];
             //
-            r97 = r1[1152:641];
-            r98 = r97[447:416];
-            r99 = r96; r99[1056:1025] = r98;
+            r95 = r51[1152:641];
+            r96 = r95[447:416];
+            r97 = r94; r97[1056:1025] = r96;
             // d.w[13] = q.w[14];
             //
-            r100 = r1[1152:641];
-            r101 = r100[479:448];
-            r102 = r99; r102[1088:1057] = r101;
+            r98 = r51[1152:641];
+            r99 = r98[479:448];
+            r100 = r97; r100[1088:1057] = r99;
             // d.w[14] = q.w[15];
             //
-            r103 = r1[1152:641];
-            r104 = r103[511:480];
-            r105 = r102; r105[1120:1089] = r104;
+            r101 = r51[1152:641];
+            r102 = r101[511:480];
+            r103 = r100; r103[1120:1089] = r102;
             // d.w[15] = get_w(q.state.round, q.w[0], q.w[1], q.w[9], q.w[14]);
             //
-            r106 = r1[640:0];
-            r107 = r106[639:512];
-            r108 = r1[1152:641];
-            r109 = r108[31:0];
-            r110 = r1[1152:641];
-            r111 = r110[63:32];
-            r112 = r1[1152:641];
-            r113 = r112[319:288];
-            r114 = r1[1152:641];
-            r115 = r114[479:448];
+            r104 = r51[640:0];
+            r105 = r104[639:512];
+            r106 = r51[1152:641];
+            r107 = r106[31:0];
+            r108 = r51[1152:641];
+            r109 = r108[63:32];
+            r110 = r51[1152:641];
+            r111 = r110[319:288];
+            r112 = r51[1152:641];
+            r113 = r112[479:448];
             // let r = round.raw();
             //
             // if r < 16 {
@@ -964,7 +940,7 @@ module top(input wire [1:0] clock_reset, input wire [512:0] i, output wire [256:
             // }
             //
             //
-            r122 = r107 < l3;
+            r120 = r105 < l3;
             // w0
             //
             // gamma1(w14) + w9 + gamma0(w1) + w0
@@ -975,134 +951,134 @@ module top(input wire [1:0] clock_reset, input wire [512:0] i, output wire [256:
             //
             // (x >> n) | (x << (32 - n))
             //
-            r554 = { {17{1'b0}}, r115 };
-            r127 = r554[48:17];
-            r564 = r115[16:0];
-            r129 = { r564, l86 };
-            r130 = r127 | r129;
+            r543 = { {17{1'b0}}, r113 };
+            r125 = r543[48:17];
+            r553 = r113[16:0];
+            r127 = { r553, l84 };
+            r128 = r125 | r127;
             // let n = n & 31;
             //
             // (x >> n) | (x << (32 - n))
             //
-            r555 = { {19{1'b0}}, r115 };
-            r135 = r555[50:19];
-            r565 = r115[18:0];
-            r137 = { r565, l87 };
-            r138 = r135 | r137;
-            r140 = r130 ^ r138;
-            r551 = { {10{1'b0}}, r115 };
-            r141 = r551[41:10];
-            r142 = r140 ^ r141;
-            r144 = r142 + r113;
+            r544 = { {19{1'b0}}, r113 };
+            r133 = r544[50:19];
+            r554 = r113[18:0];
+            r135 = { r554, l85 };
+            r136 = r133 | r135;
+            r138 = r128 ^ r136;
+            r540 = { {10{1'b0}}, r113 };
+            r139 = r540[41:10];
+            r140 = r138 ^ r139;
+            r142 = r140 + r111;
             // rotr(x, 7) ^ rotr(x, 18) ^ (x >> 3)
             //
             // let n = n & 31;
             //
             // (x >> n) | (x << (32 - n))
             //
-            r556 = { {7{1'b0}}, r111 };
-            r149 = r556[38:7];
-            r566 = r111[6:0];
-            r151 = { r566, l88 };
-            r152 = r149 | r151;
+            r545 = { {7{1'b0}}, r109 };
+            r147 = r545[38:7];
+            r555 = r109[6:0];
+            r149 = { r555, l86 };
+            r150 = r147 | r149;
             // let n = n & 31;
             //
             // (x >> n) | (x << (32 - n))
             //
-            r557 = { {18{1'b0}}, r111 };
-            r157 = r557[49:18];
-            r567 = r111[17:0];
-            r159 = { r567, l89 };
-            r160 = r157 | r159;
-            r162 = r152 ^ r160;
-            r552 = { {3{1'b0}}, r111 };
-            r163 = r552[34:3];
-            r164 = r162 ^ r163;
-            r166 = r144 + r164;
-            r167 = r166 + r109;
-            r121 = (r122) ? (r109) : (r167);
-            r169 = r105; r169[1152:1121] = r121;
+            r546 = { {18{1'b0}}, r109 };
+            r155 = r546[49:18];
+            r556 = r109[17:0];
+            r157 = { r556, l87 };
+            r158 = r155 | r157;
+            r160 = r150 ^ r158;
+            r541 = { {3{1'b0}}, r109 };
+            r161 = r541[34:3];
+            r162 = r160 ^ r161;
+            r164 = r142 + r162;
+            r165 = r164 + r107;
+            r119 = (r120) ? (r107) : (r165);
+            r167 = r103; r167[1152:1121] = r119;
             // d.w[0] = q.w[0];
             //
-            r170 = r1[1152:641];
-            r171 = r170[31:0];
-            r172 = r59; r172[672:641] = r171;
+            r168 = r51[1152:641];
+            r169 = r168[31:0];
+            r170 = r57; r170[672:641] = r169;
             // d.w[1] = q.w[1];
             //
-            r173 = r1[1152:641];
-            r174 = r173[63:32];
-            r175 = r172; r175[704:673] = r174;
+            r171 = r51[1152:641];
+            r172 = r171[63:32];
+            r173 = r170; r173[704:673] = r172;
             // d.w[2] = q.w[2];
             //
-            r176 = r1[1152:641];
-            r177 = r176[95:64];
-            r178 = r175; r178[736:705] = r177;
+            r174 = r51[1152:641];
+            r175 = r174[95:64];
+            r176 = r173; r176[736:705] = r175;
             // d.w[3] = q.w[3];
             //
-            r179 = r1[1152:641];
-            r180 = r179[127:96];
-            r181 = r178; r181[768:737] = r180;
+            r177 = r51[1152:641];
+            r178 = r177[127:96];
+            r179 = r176; r179[768:737] = r178;
             // d.w[4] = q.w[4];
             //
-            r182 = r1[1152:641];
-            r183 = r182[159:128];
-            r184 = r181; r184[800:769] = r183;
+            r180 = r51[1152:641];
+            r181 = r180[159:128];
+            r182 = r179; r182[800:769] = r181;
             // d.w[5] = q.w[5];
             //
-            r185 = r1[1152:641];
-            r186 = r185[191:160];
-            r187 = r184; r187[832:801] = r186;
+            r183 = r51[1152:641];
+            r184 = r183[191:160];
+            r185 = r182; r185[832:801] = r184;
             // d.w[6] = q.w[6];
             //
-            r188 = r1[1152:641];
-            r189 = r188[223:192];
-            r190 = r187; r190[864:833] = r189;
+            r186 = r51[1152:641];
+            r187 = r186[223:192];
+            r188 = r185; r188[864:833] = r187;
             // d.w[7] = q.w[7];
             //
-            r191 = r1[1152:641];
-            r192 = r191[255:224];
-            r193 = r190; r193[896:865] = r192;
+            r189 = r51[1152:641];
+            r190 = r189[255:224];
+            r191 = r188; r191[896:865] = r190;
             // d.w[8] = q.w[8];
             //
-            r194 = r1[1152:641];
-            r195 = r194[287:256];
-            r196 = r193; r196[928:897] = r195;
+            r192 = r51[1152:641];
+            r193 = r192[287:256];
+            r194 = r191; r194[928:897] = r193;
             // d.w[9] = q.w[9];
             //
-            r197 = r1[1152:641];
-            r198 = r197[319:288];
-            r199 = r196; r199[960:929] = r198;
+            r195 = r51[1152:641];
+            r196 = r195[319:288];
+            r197 = r194; r197[960:929] = r196;
             // d.w[10] = q.w[10];
             //
-            r200 = r1[1152:641];
-            r201 = r200[351:320];
-            r202 = r199; r202[992:961] = r201;
+            r198 = r51[1152:641];
+            r199 = r198[351:320];
+            r200 = r197; r200[992:961] = r199;
             // d.w[11] = q.w[11];
             //
-            r203 = r1[1152:641];
-            r204 = r203[383:352];
-            r205 = r202; r205[1024:993] = r204;
+            r201 = r51[1152:641];
+            r202 = r201[383:352];
+            r203 = r200; r203[1024:993] = r202;
             // d.w[12] = q.w[12];
             //
-            r206 = r1[1152:641];
-            r207 = r206[415:384];
-            r208 = r205; r208[1056:1025] = r207;
+            r204 = r51[1152:641];
+            r205 = r204[415:384];
+            r206 = r203; r206[1056:1025] = r205;
             // d.w[13] = q.w[13];
             //
-            r209 = r1[1152:641];
-            r210 = r209[447:416];
-            r211 = r208; r211[1088:1057] = r210;
+            r207 = r51[1152:641];
+            r208 = r207[447:416];
+            r209 = r206; r209[1088:1057] = r208;
             // d.w[14] = q.w[14];
             //
-            r212 = r1[1152:641];
-            r213 = r212[479:448];
-            r214 = r211; r214[1120:1089] = r213;
+            r210 = r51[1152:641];
+            r211 = r210[479:448];
+            r212 = r209; r212[1120:1089] = r211;
             // d.w[15] = q.w[15];
             //
-            r215 = r1[1152:641];
-            r216 = r215[511:480];
-            r217 = r214; r217[1152:1121] = r216;
-            r218 = (r60) ? (r169) : (r217);
+            r213 = r51[1152:641];
+            r214 = r213[511:480];
+            r215 = r212; r215[1152:1121] = r214;
+            r216 = (r58) ? (r167) : (r215);
             // if round_val < 64 {
             //    let current_w = if round_val < 16 {
             //       let idx = round_val as b64;
@@ -1185,14 +1161,12 @@ module top(input wire [1:0] clock_reset, input wire [512:0] i, output wire [256:
             //       d.state.h[6] = q.state.h[6] + d.state.g;
             //       d.state.h[7] = q.state.h[7] + d.state.h_reg;
             //       d.state.done = true;
-            //       output_valid = true;
-            //       hash_out = d.state.h;
             //    }
             //
             // }
             //
             //
-            r219 = r57 < l18;
+            r217 = r55 < l18;
             // let current_w = if round_val < 16 {
             //    let idx = round_val as b64;
             //    if idx == 0 {
@@ -1250,10 +1224,10 @@ module top(input wire [1:0] clock_reset, input wire [512:0] i, output wire [256:
             // }
             // ;
             //
-            r220 = r57 < l19;
+            r218 = r55 < l19;
             // let idx = round_val as b64;
             //
-            r221 = r57[63:0];
+            r219 = r55[63:0];
             // if idx == 0 {
             //    q.w[0]
             // }
@@ -1304,165 +1278,165 @@ module top(input wire [1:0] clock_reset, input wire [512:0] i, output wire [256:
             // }
             //
             //
-            r222 = r221 == l20;
+            r220 = r219 == l20;
             // q.w[0]
             //
-            r223 = r1[1152:641];
-            r224 = r223[31:0];
-            r225 = r221 == l21;
+            r221 = r51[1152:641];
+            r222 = r221[31:0];
+            r223 = r219 == l21;
             // q.w[1]
             //
-            r226 = r1[1152:641];
-            r227 = r226[63:32];
-            r228 = r221 == l22;
+            r224 = r51[1152:641];
+            r225 = r224[63:32];
+            r226 = r219 == l22;
             // q.w[2]
             //
-            r229 = r1[1152:641];
-            r230 = r229[95:64];
-            r231 = r221 == l23;
+            r227 = r51[1152:641];
+            r228 = r227[95:64];
+            r229 = r219 == l23;
             // q.w[3]
             //
-            r232 = r1[1152:641];
-            r233 = r232[127:96];
-            r234 = r221 == l24;
+            r230 = r51[1152:641];
+            r231 = r230[127:96];
+            r232 = r219 == l24;
             // q.w[4]
             //
-            r235 = r1[1152:641];
-            r236 = r235[159:128];
-            r237 = r221 == l25;
+            r233 = r51[1152:641];
+            r234 = r233[159:128];
+            r235 = r219 == l25;
             // q.w[5]
             //
-            r238 = r1[1152:641];
-            r239 = r238[191:160];
-            r240 = r221 == l26;
+            r236 = r51[1152:641];
+            r237 = r236[191:160];
+            r238 = r219 == l26;
             // q.w[6]
             //
-            r241 = r1[1152:641];
-            r242 = r241[223:192];
-            r243 = r221 == l27;
+            r239 = r51[1152:641];
+            r240 = r239[223:192];
+            r241 = r219 == l27;
             // q.w[7]
             //
-            r244 = r1[1152:641];
-            r245 = r244[255:224];
-            r246 = r221 == l28;
+            r242 = r51[1152:641];
+            r243 = r242[255:224];
+            r244 = r219 == l28;
             // q.w[8]
             //
-            r247 = r1[1152:641];
-            r248 = r247[287:256];
-            r249 = r221 == l29;
+            r245 = r51[1152:641];
+            r246 = r245[287:256];
+            r247 = r219 == l29;
             // q.w[9]
             //
-            r250 = r1[1152:641];
-            r251 = r250[319:288];
-            r252 = r221 == l30;
+            r248 = r51[1152:641];
+            r249 = r248[319:288];
+            r250 = r219 == l30;
             // q.w[10]
             //
-            r253 = r1[1152:641];
-            r254 = r253[351:320];
-            r255 = r221 == l31;
+            r251 = r51[1152:641];
+            r252 = r251[351:320];
+            r253 = r219 == l31;
             // q.w[11]
             //
-            r256 = r1[1152:641];
-            r257 = r256[383:352];
-            r258 = r221 == l32;
+            r254 = r51[1152:641];
+            r255 = r254[383:352];
+            r256 = r219 == l32;
             // q.w[12]
             //
-            r259 = r1[1152:641];
-            r260 = r259[415:384];
-            r261 = r221 == l33;
+            r257 = r51[1152:641];
+            r258 = r257[415:384];
+            r259 = r219 == l33;
             // q.w[13]
             //
-            r262 = r1[1152:641];
-            r263 = r262[447:416];
-            r264 = r221 == l34;
+            r260 = r51[1152:641];
+            r261 = r260[447:416];
+            r262 = r219 == l34;
             // q.w[14]
             //
-            r265 = r1[1152:641];
-            r266 = r265[479:448];
+            r263 = r51[1152:641];
+            r264 = r263[479:448];
             // q.w[15]
             //
-            r267 = r1[1152:641];
-            r268 = r267[511:480];
-            r269 = (r264) ? (r266) : (r268);
-            r270 = (r261) ? (r263) : (r269);
-            r271 = (r258) ? (r260) : (r270);
-            r272 = (r255) ? (r257) : (r271);
-            r273 = (r252) ? (r254) : (r272);
-            r274 = (r249) ? (r251) : (r273);
-            r275 = (r246) ? (r248) : (r274);
-            r276 = (r243) ? (r245) : (r275);
-            r277 = (r240) ? (r242) : (r276);
-            r278 = (r237) ? (r239) : (r277);
-            r279 = (r234) ? (r236) : (r278);
-            r280 = (r231) ? (r233) : (r279);
-            r281 = (r228) ? (r230) : (r280);
-            r282 = (r225) ? (r227) : (r281);
-            r283 = (r222) ? (r224) : (r282);
+            r265 = r51[1152:641];
+            r266 = r265[511:480];
+            r267 = (r262) ? (r264) : (r266);
+            r268 = (r259) ? (r261) : (r267);
+            r269 = (r256) ? (r258) : (r268);
+            r270 = (r253) ? (r255) : (r269);
+            r271 = (r250) ? (r252) : (r270);
+            r272 = (r247) ? (r249) : (r271);
+            r273 = (r244) ? (r246) : (r272);
+            r274 = (r241) ? (r243) : (r273);
+            r275 = (r238) ? (r240) : (r274);
+            r276 = (r235) ? (r237) : (r275);
+            r277 = (r232) ? (r234) : (r276);
+            r278 = (r229) ? (r231) : (r277);
+            r279 = (r226) ? (r228) : (r278);
+            r280 = (r223) ? (r225) : (r279);
+            r281 = (r220) ? (r222) : (r280);
             // d.w[15]
             //
-            r284 = r218[1152:641];
-            r285 = r284[511:480];
-            r286 = (r220) ? (r283) : (r285);
+            r282 = r216[1152:641];
+            r283 = r282[511:480];
+            r284 = (r218) ? (r281) : (r283);
             // let s1 = sigma1(q.state.e);
             //
-            r287 = r1[640:0];
-            r288 = r287[415:384];
+            r285 = r51[640:0];
+            r286 = r285[415:384];
             // rotr(x, 6) ^ rotr(x, 11) ^ rotr(x, 25)
             //
             // let n = n & 31;
             //
             // (x >> n) | (x << (32 - n))
             //
-            r558 = { {6{1'b0}}, r288 };
-            r294 = r558[37:6];
-            r568 = r288[5:0];
-            r296 = { r568, l90 };
-            r297 = r294 | r296;
+            r547 = { {6{1'b0}}, r286 };
+            r292 = r547[37:6];
+            r557 = r286[5:0];
+            r294 = { r557, l88 };
+            r295 = r292 | r294;
             // let n = n & 31;
             //
             // (x >> n) | (x << (32 - n))
             //
-            r559 = { {11{1'b0}}, r288 };
-            r302 = r559[42:11];
-            r569 = r288[10:0];
-            r304 = { r569, l91 };
-            r305 = r302 | r304;
-            r307 = r297 ^ r305;
+            r548 = { {11{1'b0}}, r286 };
+            r300 = r548[42:11];
+            r558 = r286[10:0];
+            r302 = { r558, l89 };
+            r303 = r300 | r302;
+            r305 = r295 ^ r303;
             // let n = n & 31;
             //
             // (x >> n) | (x << (32 - n))
             //
-            r560 = { {25{1'b0}}, r288 };
-            r311 = r560[56:25];
-            r570 = r288[24:0];
-            r313 = { r570, l92 };
-            r314 = r311 | r313;
-            r290 = r307 ^ r314;
+            r549 = { {25{1'b0}}, r286 };
+            r309 = r549[56:25];
+            r559 = r286[24:0];
+            r311 = { r559, l90 };
+            r312 = r309 | r311;
+            r288 = r305 ^ r312;
             // let ch_result = ch(q.state.e, q.state.f, q.state.g);
             //
-            r317 = r1[640:0];
-            r318 = r317[415:384];
-            r319 = r1[640:0];
-            r320 = r319[447:416];
-            r321 = r1[640:0];
-            r322 = r321[479:448];
+            r315 = r51[640:0];
+            r316 = r315[415:384];
+            r317 = r51[640:0];
+            r318 = r317[447:416];
+            r319 = r51[640:0];
+            r320 = r319[479:448];
             // (x & y) ^ (!x & z)
             //
-            r327 = r318 & r320;
-            r328 = ~(r318);
-            r329 = r328 & r322;
-            r326 = r327 ^ r329;
+            r325 = r316 & r318;
+            r326 = ~(r316);
+            r327 = r326 & r320;
+            r324 = r325 ^ r327;
             // let temp1 = q.state.h_reg + s1 + ch_result + get_k(q.state.round) + current_w;
             //
-            r331 = r1[640:0];
-            r332 = r331[511:480];
-            r333 = r332 + r290;
-            r334 = r333 + r326;
-            r335 = r1[640:0];
-            r336 = r335[639:512];
+            r329 = r51[640:0];
+            r330 = r329[511:480];
+            r331 = r330 + r288;
+            r332 = r331 + r324;
+            r333 = r51[640:0];
+            r334 = r333[639:512];
             // let r = round.raw() as b64;
             //
-            r339 = r336[63:0];
+            r337 = r334[63:0];
             // if r < 64 {
             //    bits(K[r])
             // }
@@ -1471,120 +1445,120 @@ module top(input wire [1:0] clock_reset, input wire [512:0] i, output wire [256:
             // }
             //
             //
-            r340 = r339 < l44;
+            r338 = r337 < l44;
             // bits(K[r])
             //
-            r341 = r339[13:0];
-            r550 = { {14{1'b0}}, r341 };
-            r553 = r550[20:0];
-            r342 = { r553, l65 };
-            r343 = r342[13:0];
-            r344 = l46 + r343;
-            r345 = l47[(r344) +: 128];
-            r346 = r345[31:0];
+            r339 = r337[13:0];
+            r539 = { {14{1'b0}}, r339 };
+            r542 = r539[20:0];
+            r340 = { r542, l63 };
+            r341 = r340[13:0];
+            r342 = l46 + r341;
+            r343 = l47[(r342) +: 128];
+            r344 = r343[31:0];
             // bits(0)
             //
-            r338 = (r340) ? (r346) : (l48);
-            r348 = r334 + r338;
-            r349 = r348 + r286;
+            r336 = (r338) ? (r344) : (l48);
+            r346 = r332 + r336;
+            r347 = r346 + r284;
             // let s0 = sigma0(q.state.a);
             //
-            r350 = r1[640:0];
-            r351 = r350[287:256];
+            r348 = r51[640:0];
+            r349 = r348[287:256];
             // rotr(x, 2) ^ rotr(x, 13) ^ rotr(x, 22)
             //
             // let n = n & 31;
             //
             // (x >> n) | (x << (32 - n))
             //
-            r561 = { {2{1'b0}}, r351 };
-            r357 = r561[33:2];
-            r571 = r351[1:0];
-            r359 = { r571, l93 };
-            r360 = r357 | r359;
+            r550 = { {2{1'b0}}, r349 };
+            r355 = r550[33:2];
+            r560 = r349[1:0];
+            r357 = { r560, l91 };
+            r358 = r355 | r357;
             // let n = n & 31;
             //
             // (x >> n) | (x << (32 - n))
             //
-            r562 = { {13{1'b0}}, r351 };
-            r365 = r562[44:13];
-            r572 = r351[12:0];
-            r367 = { r572, l94 };
-            r368 = r365 | r367;
-            r370 = r360 ^ r368;
+            r551 = { {13{1'b0}}, r349 };
+            r363 = r551[44:13];
+            r561 = r349[12:0];
+            r365 = { r561, l92 };
+            r366 = r363 | r365;
+            r368 = r358 ^ r366;
             // let n = n & 31;
             //
             // (x >> n) | (x << (32 - n))
             //
-            r563 = { {22{1'b0}}, r351 };
-            r374 = r563[53:22];
-            r573 = r351[21:0];
-            r376 = { r573, l95 };
-            r377 = r374 | r376;
-            r353 = r370 ^ r377;
+            r552 = { {22{1'b0}}, r349 };
+            r372 = r552[53:22];
+            r562 = r349[21:0];
+            r374 = { r562, l93 };
+            r375 = r372 | r374;
+            r351 = r368 ^ r375;
             // let maj_result = maj(q.state.a, q.state.b, q.state.c);
             //
-            r380 = r1[640:0];
-            r381 = r380[287:256];
-            r382 = r1[640:0];
-            r383 = r382[319:288];
-            r384 = r1[640:0];
-            r385 = r384[351:320];
+            r378 = r51[640:0];
+            r379 = r378[287:256];
+            r380 = r51[640:0];
+            r381 = r380[319:288];
+            r382 = r51[640:0];
+            r383 = r382[351:320];
             // (x & y) ^ (x & z) ^ (y & z)
             //
-            r390 = r381 & r383;
-            r391 = r381 & r385;
-            r392 = r390 ^ r391;
-            r393 = r383 & r385;
-            r389 = r392 ^ r393;
+            r388 = r379 & r381;
+            r389 = r379 & r383;
+            r390 = r388 ^ r389;
+            r391 = r381 & r383;
+            r387 = r390 ^ r391;
             // let temp2 = s0 + maj_result;
             //
-            r395 = r353 + r389;
+            r393 = r351 + r387;
             // d.state.h_reg = q.state.g;
             //
-            r396 = r1[640:0];
-            r397 = r396[479:448];
-            r398 = r218; r398[511:480] = r397;
+            r394 = r51[640:0];
+            r395 = r394[479:448];
+            r396 = r216; r396[511:480] = r395;
             // d.state.g = q.state.f;
             //
-            r399 = r1[640:0];
-            r400 = r399[447:416];
-            r401 = r398; r401[479:448] = r400;
+            r397 = r51[640:0];
+            r398 = r397[447:416];
+            r399 = r396; r399[479:448] = r398;
             // d.state.f = q.state.e;
             //
-            r402 = r1[640:0];
-            r403 = r402[415:384];
-            r404 = r401; r404[447:416] = r403;
+            r400 = r51[640:0];
+            r401 = r400[415:384];
+            r402 = r399; r402[447:416] = r401;
             // d.state.e = q.state.d + temp1;
             //
-            r405 = r1[640:0];
-            r406 = r405[383:352];
-            r407 = r406 + r349;
-            r408 = r404; r408[415:384] = r407;
+            r403 = r51[640:0];
+            r404 = r403[383:352];
+            r405 = r404 + r347;
+            r406 = r402; r406[415:384] = r405;
             // d.state.d = q.state.c;
             //
-            r409 = r1[640:0];
-            r410 = r409[351:320];
-            r411 = r408; r411[383:352] = r410;
+            r407 = r51[640:0];
+            r408 = r407[351:320];
+            r409 = r406; r409[383:352] = r408;
             // d.state.c = q.state.b;
             //
-            r412 = r1[640:0];
-            r413 = r412[319:288];
-            r414 = r411; r414[351:320] = r413;
+            r410 = r51[640:0];
+            r411 = r410[319:288];
+            r412 = r409; r412[351:320] = r411;
             // d.state.b = q.state.a;
             //
-            r415 = r1[640:0];
-            r416 = r415[287:256];
-            r417 = r414; r417[319:288] = r416;
+            r413 = r51[640:0];
+            r414 = r413[287:256];
+            r415 = r412; r415[319:288] = r414;
             // d.state.a = temp1 + temp2;
             //
-            r418 = r349 + r395;
-            r419 = r417; r419[287:256] = r418;
+            r416 = r347 + r393;
+            r417 = r415; r417[287:256] = r416;
             // d.state.round = bits(round_val + 1);
             //
-            r420 = r57 + l58;
-            r421 = r420[127:0];
-            r422 = r419; r422[639:512] = r421;
+            r418 = r55 + l58;
+            r419 = r418[127:0];
+            r420 = r417; r420[639:512] = r419;
             // if round_val == 63 {
             //    d.state.h[0] = q.state.h[0] + d.state.a;
             //    d.state.h[1] = q.state.h[1] + d.state.b;
@@ -1595,200 +1569,182 @@ module top(input wire [1:0] clock_reset, input wire [512:0] i, output wire [256:
             //    d.state.h[6] = q.state.h[6] + d.state.g;
             //    d.state.h[7] = q.state.h[7] + d.state.h_reg;
             //    d.state.done = true;
-            //    output_valid = true;
-            //    hash_out = d.state.h;
             // }
             //
             //
-            r423 = r57 == l59;
+            r421 = r55 == l59;
             // d.state.h[0] = q.state.h[0] + d.state.a;
             //
-            r424 = r1[640:0];
-            r425 = r424[255:0];
-            r426 = r425[31:0];
-            r427 = r422[640:0];
-            r428 = r427[287:256];
-            r429 = r426 + r428;
-            r430 = r422; r430[31:0] = r429;
+            r422 = r51[640:0];
+            r423 = r422[255:0];
+            r424 = r423[31:0];
+            r425 = r420[640:0];
+            r426 = r425[287:256];
+            r427 = r424 + r426;
+            r428 = r420; r428[31:0] = r427;
             // d.state.h[1] = q.state.h[1] + d.state.b;
             //
-            r431 = r1[640:0];
-            r432 = r431[255:0];
-            r433 = r432[63:32];
-            r434 = r430[640:0];
-            r435 = r434[319:288];
-            r436 = r433 + r435;
-            r437 = r430; r437[63:32] = r436;
+            r429 = r51[640:0];
+            r430 = r429[255:0];
+            r431 = r430[63:32];
+            r432 = r428[640:0];
+            r433 = r432[319:288];
+            r434 = r431 + r433;
+            r435 = r428; r435[63:32] = r434;
             // d.state.h[2] = q.state.h[2] + d.state.c;
             //
-            r438 = r1[640:0];
-            r439 = r438[255:0];
-            r440 = r439[95:64];
-            r441 = r437[640:0];
-            r442 = r441[351:320];
-            r443 = r440 + r442;
-            r444 = r437; r444[95:64] = r443;
+            r436 = r51[640:0];
+            r437 = r436[255:0];
+            r438 = r437[95:64];
+            r439 = r435[640:0];
+            r440 = r439[351:320];
+            r441 = r438 + r440;
+            r442 = r435; r442[95:64] = r441;
             // d.state.h[3] = q.state.h[3] + d.state.d;
             //
-            r445 = r1[640:0];
-            r446 = r445[255:0];
-            r447 = r446[127:96];
-            r448 = r444[640:0];
-            r449 = r448[383:352];
-            r450 = r447 + r449;
-            r451 = r444; r451[127:96] = r450;
+            r443 = r51[640:0];
+            r444 = r443[255:0];
+            r445 = r444[127:96];
+            r446 = r442[640:0];
+            r447 = r446[383:352];
+            r448 = r445 + r447;
+            r449 = r442; r449[127:96] = r448;
             // d.state.h[4] = q.state.h[4] + d.state.e;
             //
-            r452 = r1[640:0];
-            r453 = r452[255:0];
-            r454 = r453[159:128];
-            r455 = r451[640:0];
-            r456 = r455[415:384];
-            r457 = r454 + r456;
-            r458 = r451; r458[159:128] = r457;
+            r450 = r51[640:0];
+            r451 = r450[255:0];
+            r452 = r451[159:128];
+            r453 = r449[640:0];
+            r454 = r453[415:384];
+            r455 = r452 + r454;
+            r456 = r449; r456[159:128] = r455;
             // d.state.h[5] = q.state.h[5] + d.state.f;
             //
-            r459 = r1[640:0];
-            r460 = r459[255:0];
-            r461 = r460[191:160];
-            r462 = r458[640:0];
-            r463 = r462[447:416];
-            r464 = r461 + r463;
-            r465 = r458; r465[191:160] = r464;
+            r457 = r51[640:0];
+            r458 = r457[255:0];
+            r459 = r458[191:160];
+            r460 = r456[640:0];
+            r461 = r460[447:416];
+            r462 = r459 + r461;
+            r463 = r456; r463[191:160] = r462;
             // d.state.h[6] = q.state.h[6] + d.state.g;
             //
-            r466 = r1[640:0];
-            r467 = r466[255:0];
-            r468 = r467[223:192];
-            r469 = r465[640:0];
-            r470 = r469[479:448];
-            r471 = r468 + r470;
-            r472 = r465; r472[223:192] = r471;
+            r464 = r51[640:0];
+            r465 = r464[255:0];
+            r466 = r465[223:192];
+            r467 = r463[640:0];
+            r468 = r467[479:448];
+            r469 = r466 + r468;
+            r470 = r463; r470[223:192] = r469;
             // d.state.h[7] = q.state.h[7] + d.state.h_reg;
             //
-            r473 = r1[640:0];
-            r474 = r473[255:0];
-            r475 = r474[255:224];
-            r476 = r472[640:0];
-            r477 = r476[511:480];
-            r478 = r475 + r477;
-            r479 = r472; r479[255:224] = r478;
+            r471 = r51[640:0];
+            r472 = r471[255:0];
+            r473 = r472[255:224];
+            r474 = r470[640:0];
+            r475 = r474[511:480];
+            r476 = r473 + r475;
+            r477 = r470; r477[255:224] = r476;
             // d.state.done = true;
             //
-            r480 = r479; r480[640:640] = l60;
-            // output_valid = true;
-            //
-            // hash_out = d.state.h;
-            //
-            r481 = r480[640:0];
-            r482 = r481[255:0];
-            r483 = (r423) ? (r480) : (r422);
-            r484 = (r423) ? (r482) : (r2);
-            r485 = (r423) ? (l61) : (l62);
-            r486 = (r219) ? (r483) : (r218);
-            r487 = (r219) ? (r484) : (r2);
-            r488 = (r219) ? (r485) : (l62);
+            r478 = r477; r478[640:640] = l60;
+            r479 = (r421) ? (r478) : (r420);
+            r480 = (r217) ? (r479) : (r216);
             // d.state = q.state;
             //
-            r489 = r1[640:0];
-            r490 = l1; r490[640:0] = r489;
+            r481 = r51[640:0];
+            r482 = l1; r482[640:0] = r481;
             // d.w[0] = q.w[0];
             //
-            r491 = r1[1152:641];
-            r492 = r491[31:0];
-            r493 = r490; r493[672:641] = r492;
+            r483 = r51[1152:641];
+            r484 = r483[31:0];
+            r485 = r482; r485[672:641] = r484;
             // d.w[1] = q.w[1];
             //
-            r494 = r1[1152:641];
-            r495 = r494[63:32];
-            r496 = r493; r496[704:673] = r495;
+            r486 = r51[1152:641];
+            r487 = r486[63:32];
+            r488 = r485; r488[704:673] = r487;
             // d.w[2] = q.w[2];
             //
-            r497 = r1[1152:641];
-            r498 = r497[95:64];
-            r499 = r496; r499[736:705] = r498;
+            r489 = r51[1152:641];
+            r490 = r489[95:64];
+            r491 = r488; r491[736:705] = r490;
             // d.w[3] = q.w[3];
             //
-            r500 = r1[1152:641];
-            r501 = r500[127:96];
-            r502 = r499; r502[768:737] = r501;
+            r492 = r51[1152:641];
+            r493 = r492[127:96];
+            r494 = r491; r494[768:737] = r493;
             // d.w[4] = q.w[4];
             //
-            r503 = r1[1152:641];
-            r504 = r503[159:128];
-            r505 = r502; r505[800:769] = r504;
+            r495 = r51[1152:641];
+            r496 = r495[159:128];
+            r497 = r494; r497[800:769] = r496;
             // d.w[5] = q.w[5];
             //
-            r506 = r1[1152:641];
-            r507 = r506[191:160];
-            r508 = r505; r508[832:801] = r507;
+            r498 = r51[1152:641];
+            r499 = r498[191:160];
+            r500 = r497; r500[832:801] = r499;
             // d.w[6] = q.w[6];
             //
-            r509 = r1[1152:641];
-            r510 = r509[223:192];
-            r511 = r508; r511[864:833] = r510;
+            r501 = r51[1152:641];
+            r502 = r501[223:192];
+            r503 = r500; r503[864:833] = r502;
             // d.w[7] = q.w[7];
             //
-            r512 = r1[1152:641];
-            r513 = r512[255:224];
-            r514 = r511; r514[896:865] = r513;
+            r504 = r51[1152:641];
+            r505 = r504[255:224];
+            r506 = r503; r506[896:865] = r505;
             // d.w[8] = q.w[8];
             //
-            r515 = r1[1152:641];
-            r516 = r515[287:256];
-            r517 = r514; r517[928:897] = r516;
+            r507 = r51[1152:641];
+            r508 = r507[287:256];
+            r509 = r506; r509[928:897] = r508;
             // d.w[9] = q.w[9];
             //
-            r518 = r1[1152:641];
-            r519 = r518[319:288];
-            r520 = r517; r520[960:929] = r519;
+            r510 = r51[1152:641];
+            r511 = r510[319:288];
+            r512 = r509; r512[960:929] = r511;
             // d.w[10] = q.w[10];
             //
-            r521 = r1[1152:641];
-            r522 = r521[351:320];
-            r523 = r520; r523[992:961] = r522;
+            r513 = r51[1152:641];
+            r514 = r513[351:320];
+            r515 = r512; r515[992:961] = r514;
             // d.w[11] = q.w[11];
             //
-            r524 = r1[1152:641];
-            r525 = r524[383:352];
-            r526 = r523; r526[1024:993] = r525;
+            r516 = r51[1152:641];
+            r517 = r516[383:352];
+            r518 = r515; r518[1024:993] = r517;
             // d.w[12] = q.w[12];
             //
-            r527 = r1[1152:641];
-            r528 = r527[415:384];
-            r529 = r526; r529[1056:1025] = r528;
+            r519 = r51[1152:641];
+            r520 = r519[415:384];
+            r521 = r518; r521[1056:1025] = r520;
             // d.w[13] = q.w[13];
             //
-            r530 = r1[1152:641];
-            r531 = r530[447:416];
-            r532 = r529; r532[1088:1057] = r531;
+            r522 = r51[1152:641];
+            r523 = r522[447:416];
+            r524 = r521; r524[1088:1057] = r523;
             // d.w[14] = q.w[14];
             //
-            r533 = r1[1152:641];
-            r534 = r533[479:448];
-            r535 = r532; r535[1120:1089] = r534;
+            r525 = r51[1152:641];
+            r526 = r525[479:448];
+            r527 = r524; r527[1120:1089] = r526;
             // d.w[15] = q.w[15];
             //
-            r536 = r1[1152:641];
-            r537 = r536[511:480];
-            r538 = r535; r538[1152:1121] = r537;
-            // output_valid = true;
+            r528 = r51[1152:641];
+            r529 = r528[511:480];
+            r530 = r527; r530[1152:1121] = r529;
+            r531 = (r53) ? (r480) : (r530);
+            r532 = (r0) ? (r49) : (r531);
+            // let output = Sha256Output/* fpga_test::Sha256Output */ {done: q.state.done,};
             //
-            // hash_out = q.state.h;
+            r533 = r51[640:0];
+            r534 = r533[640];
+            r536 = l61; r536[0:0] = r534;
+            // (output, d, )
             //
-            r539 = r1[640:0];
-            r540 = r539[255:0];
-            r541 = (r55) ? (r486) : (r538);
-            r542 = (r55) ? (r487) : (r540);
-            r543 = (r55) ? (r488) : (l63);
-            r544 = (r3) ? (r52) : (r541);
-            r545 = (r3) ? (r2) : (r542);
-            r546 = (r3) ? (l62) : (r543);
-            // ((hash_out, output_valid, ), d, )
-            //
-            r547 = { r546, r545 };
-            r548 = { r544, r547 };
-            kernel_kernel = r548;
+            r537 = { r532, r536 };
+            kernel_kernel = r537;
         end
     endfunction
 endmodule

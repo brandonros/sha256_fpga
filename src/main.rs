@@ -41,6 +41,12 @@ pub struct Sha256Input {
     pub start: bool,
 }
 
+#[derive(PartialEq, Digital)]
+pub struct Sha256Output {
+    pub done: bool,           // Computation complete
+    //pub hash_lsb: Bits<U32>,   // Just the lowest 8 bits of first hash word
+}
+
 #[derive(Clone, Synchronous, SynchronousDQ)]
 pub struct Sha256Core {
     state: DFF<Sha256State>,
@@ -64,7 +70,8 @@ impl Default for Sha256Core {
 
 impl SynchronousIO for Sha256Core {
     type I = Sha256Input;
-    type O = ([Bits<U32>; 8], bool); // (hash_output, valid)
+    //type O = Sha256Output;
+    type O = Sha256Output;
     type Kernel = kernel;
 }
 
@@ -129,10 +136,8 @@ fn get_w(round: Bits<U128>, w0: Bits<U32>, w1: Bits<U32>, w9: Bits<U32>, w14: Bi
 }
 
 #[kernel]
-pub fn kernel(_cr: ClockReset, input: Sha256Input, q: Q) -> (([Bits<U32>; 8], bool), D) {
+pub fn kernel(_cr: ClockReset, input: Sha256Input, q: Q) -> (Sha256Output, D) {
     let mut d = D::dont_care();
-    let mut output_valid = false;
-    let mut hash_out = q.state.h;
 
     if input.start {
         // Initialize new hash computation
@@ -271,8 +276,6 @@ pub fn kernel(_cr: ClockReset, input: Sha256Input, q: Q) -> (([Bits<U32>; 8], bo
                 d.state.h[7] = q.state.h[7] + d.state.h_reg;
                 
                 d.state.done = true;
-                output_valid = true;
-                hash_out = d.state.h;
             }
         }
     } else {
@@ -294,11 +297,15 @@ pub fn kernel(_cr: ClockReset, input: Sha256Input, q: Q) -> (([Bits<U32>; 8], bo
         d.w[13] = q.w[13];
         d.w[14] = q.w[14];
         d.w[15] = q.w[15];
-        output_valid = true;
-        hash_out = q.state.h;
     }
 
-    ((hash_out, output_valid), d)
+    //let hash_out = q.state.h;
+    let output = Sha256Output {
+        done: q.state.done,
+        //hash_lsb: hash_out[0],
+    };
+    
+    (output, d)
 }
 
 fn pad_message_to_block(message: &[u8]) -> [Bits<U32>; 16] {
